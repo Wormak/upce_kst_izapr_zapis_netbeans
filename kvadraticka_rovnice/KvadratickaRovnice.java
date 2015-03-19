@@ -13,8 +13,8 @@ public class KvadratickaRovnice {
 
       double d = Math.pow(b, 2)-4*a*c;
 
-      double x1 = 0;
-      double x2 = 0;
+      double x1 = Double.NaN;
+      double x2 = Double.NaN;
       if ( d > 0 ) {
         x1 = -b + Math.sqrt(d) / 2 * a;
         x2 = -b - Math.sqrt(d) / 2 * a;
