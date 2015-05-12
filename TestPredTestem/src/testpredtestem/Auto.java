@@ -1,41 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package testpredtestem;
 
-/**
- *
- * @author pavel
- */
 public class Auto {
+    // Deklarace polí pro záznam jízd
+    // O neurčité velikosti, ale pro celou třídu
     private int[] vzdalenost;
     private double[] spotreba;
     
     public Auto(int pocetJizd) {
+        // Deklarace polí s danou velikostí
         int[] vzdalenost_ = new int[pocetJizd];
         double[] spotreba_ = new double[pocetJizd];
+        // Přepis do polí platných v celé třídě
         this.vzdalenost = vzdalenost_;
         this.spotreba = spotreba_;
         
-        
+        // Cyklus Vytvářející jednotlivé jízdy
         for (int i=0; i<pocetJizd; i++) {
             pridejJizdu(i);
         }
     }
     
     private void pridejJizdu(int i) {
+        // Plnění konkrétních prvků náhodnými hodnotami
         this.vzdalenost[i] = (int)dejNahodneCislo(5, 250);
         this.spotreba[i] = dejNahodneCislo(4.5, 9.0);
     }
     
     private double dejNahodneCislo(double min, double max) {
-        double rand = (Math.random() * (max-min)) + min;
-        return zaokrouhli(rand);
+        // Díky Jakubovi Štěpánkovi za tenhle vzoreček
+        return (Math.random() * (max-min)) + min;
     }
 
     private double zaokrouhli(double cislo) {
+        // Díky Jakubovi Štěpánkovi za tenhle vzoreček
         cislo = cislo*100;
         cislo = Math.round(cislo);
         cislo = cislo / 100;
