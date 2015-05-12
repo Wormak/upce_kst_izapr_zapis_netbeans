@@ -1,1 +1,5 @@
 *.class
+
+/TestPredTestem/nbproject/private/
+/TestPredTestem/build/
+/TestPredTestem/dist/
