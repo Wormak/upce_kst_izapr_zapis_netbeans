@@ -7,12 +7,9 @@ public class Auto {
     private double[] spotreba;
     
     public Auto(int pocetJizd) {
-        // Deklarace polí s danou velikostí
-        int[] vzdalenost_ = new int[pocetJizd];
-        double[] spotreba_ = new double[pocetJizd];
-        // Přepis do polí platných v celé třídě
-        this.vzdalenost = vzdalenost_;
-        this.spotreba = spotreba_;
+        // Přepsání polí novými s danou velikostí
+        this.vzdalenost = new int[pocetJizd];
+        this.spotreba = new double[pocetJizd];
         
         // Cyklus Vytvářející jednotlivé jízdy
         for (int i=0; i<pocetJizd; i++) {
